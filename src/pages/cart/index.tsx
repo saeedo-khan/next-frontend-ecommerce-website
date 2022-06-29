@@ -16,7 +16,6 @@ import  useStyles from './Cart.styles';
 // icons
 import { BsCart } from "react-icons/bs";
 import Register from '../../components/register/Register';
-import Login from '../../components/login/Login';
 
 interface CartProps {
     item: ICartItems;
@@ -164,7 +163,7 @@ const Cart: React.FC<CartProps> = () => {
                             backgroundColor: 'red'
                         }
                     }}>
-                        <Link href='/'>
+                        <Link href='/' passHref>
                             <Box component={'a'} sx={{
                             backgroundColor: '#333',
                             color: 'white',

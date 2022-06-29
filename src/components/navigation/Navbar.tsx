@@ -257,7 +257,7 @@ const Navbar = ({ toggleNav }: NavbarProps) => {
               </MenuItem>
               </Link>
               <Divider/>
-              <Link href='/kids-fashion'>
+              <Link href='/kids-fashion' passHref>
               <MenuItem onClick={handleCloseCategories}>
                 <a>Kids</a>
               </MenuItem>
