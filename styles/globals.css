@@ -3,7 +3,22 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: FuturaPTDemi;
+  src: url("../src/assets/fonts/FuturaPT-DemiObl.woff2");
+}
+@font-face {
+  font-family: FuturaPT-Book;
+  src: url("../src/assets/fonts/FuturaPT-Book.woff2");
+}
+@font-face {
+  font-family: FuturaPT-Bold;
+  src: url("../src/assets/fonts/FuturaPT-Bold.woff2");
 }
 
 a {
@@ -13,4 +28,19 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+#__next{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }

@@ -1,0 +1,107 @@
+
+.container{
+    position: relative;
+    max-width: 1800px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.text{
+    text-align: center;
+    margin-top: 3rem ;
+}
+
+.text h3{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.2rem;
+    transition: 0.3s ease-in-out;
+    color: #333333;
+}
+
+.text h3:hover{
+    color: #EE9051;
+}
+.imgContainer{
+    margin: 0 1%;
+    width: 328px;
+    height: 400px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1600px) {
+    .container{
+        width: 1450px
+    }
+}
+@media screen and (max-width:1450px){
+    .container{
+        width: 1400px;
+    }
+    .imgContainer{
+        width: 300px;
+        height: 350px;
+    }
+}
+@media screen and (max-width: 1340px) {
+    .container{
+        width: 1200px;
+    }
+    .imgContainer{
+        width: 280px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .imgContainer{
+        width: 250px;
+        height: 280px;
+    }
+    .container{
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width:1086px){
+    .container{
+        width: 760px;
+    }
+}
+
+@media screen and (max-width:772px){
+    .container{
+        width: 600px;
+    }
+}
+@media screen and (max-width:602px){
+    .container{
+        width: 500px;
+    }
+    .imgContainer{
+        width: 200px;
+        height: 250px;
+    }
+}
+@media screen and (max-width:502px){
+    .container{
+        width: 90%;
+    }
+    .imgContainer{
+        width: 180px;
+        height: 250px;
+    }
+}
+@media screen and (max-width:440px){
+    .container{
+        width: 80%;
+    }
+    .imgContainer{
+        width: 250px;
+        height: 300px;
+    }
+}

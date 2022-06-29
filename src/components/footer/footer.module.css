@@ -1,0 +1,107 @@
+
+.footer{
+    margin: 1rem 0;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+
+.newsletter{
+    display: flex;
+    align-items: center;
+}
+
+.wrapNewsletter{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.wrapNewsletter:hover{
+    color: rgb(238, 144, 81);
+    transition: 0.3s ease-in-out;
+}
+
+.line{
+    width: 80%;
+    background-color: rgba(0, 0, 0, 1);
+    height: 2px;
+    margin: 2rem auto;
+}
+
+.copyRight__text{
+    font-family: 'FuturaPTDemi';
+    font-size: 1.1rem;
+}
+
+
+.socialContact{
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.socialContact > div{
+    padding-left: 0.5rem;
+    cursor: pointer;
+}
+
+.icon1:hover{
+    color: rgb(238, 144, 81);
+}
+.icon2:hover{
+    color: rgb(238, 144, 81);
+}
+.icon3:hover{
+    color: rgb(238, 144, 81);
+}
+.icon4
+:hover{
+    color: rgb(238, 144, 81);
+}
+
+
+@media screen and (max-width:400px){
+    .bottom{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .copyRight{
+        text-align: center;
+    }
+
+    .wrapNewsletter p{
+        font-size: 0.9rem;
+    }
+
+    .logo{
+        width: 80px;
+    }
+    
+}

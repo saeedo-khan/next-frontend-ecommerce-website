@@ -1,0 +1,91 @@
+
+
+.insta{
+    margin: 4rem 0;
+}
+.container{
+    display: flex;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+.img{
+    width: 450px;
+    height: 350px;
+    position: relative;
+}
+
+
+@media screen and (max-width:1650px){
+    .container{
+        max-width: 1300px;
+    }
+    .img{
+        width: 350px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:1250px){
+    .container{
+        max-width: 1100px;
+    }
+    
+}
+
+@media screen and (max-width:1100px){
+    .container{
+        max-width: 1000px;
+    }
+    .img{
+        width: 250px;
+        height: 150px;
+    }
+    
+}
+
+@media screen and (max-width:760px){
+    .container{
+        max-width: 700px;
+    }
+    .img{
+        width: 250px;
+        height: 150px;
+    }
+    
+}
+
+@media screen and (max-width:650px){
+    .container{
+        flex-wrap: wrap;
+    }
+    .img{
+        width: 300px;
+        height: 250px;
+    }
+    
+}
+
+@media screen and (max-width:602px){
+    .container{
+        align-items: center;
+        justify-content: center;
+    }
+    .img{
+        width: 290px;
+        height: 250px;
+    }
+    
+}
+
+@media screen and (max-width:576px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .img{
+        width: 90%;
+        height: 350px;
+    }
+    
+}
