@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Box, Button, Theme, Typography } from '@mui/material';
 import Link from 'next/link';
 import { makeStyles, createStyles } from '@material-ui/core';
 import { runFireworks } from '../../../lib/utils'
-import { AiFillShopping } from "react-icons/ai";
 import { BsBagCheckFill } from 'react-icons/bs';
 import useCart from '../../context/cart/CartContext';
 
