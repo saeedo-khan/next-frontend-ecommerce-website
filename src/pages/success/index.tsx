@@ -98,7 +98,7 @@ const Success = () => {
                     <Box className={classes.text_wrap}>
                         <Typography className={classes.text_head}>Thank you for your order!</Typography>
                         <Typography className={classes.text_email} >Check your email inbox for the recipt.</Typography>
-                        <Typography className={classes.text_contact}>If you have any questions, please email : 
+                        <Typography className={classes.text_contact}>If you have any questions, please email us : 
                         <a href='mailto: saeedo0o1@hotmail.com'> saeedo0o1@hotmail.com</a>
                         </Typography>
                     </Box>
