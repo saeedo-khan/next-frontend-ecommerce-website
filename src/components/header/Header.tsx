@@ -58,7 +58,7 @@ const Header = () => {
               animate={{scale: 1}}
               transition={{type: 'spring', stiffness: 100, repeat: Infinity, duration: 5, repeatType: 'reverse'}}
               >
-                <Link href='/women-fashion'>
+                <Link href='/women-fashion' passHref>
                   <Box component='a' className={classes.btn}>Collection now</Box>
                 </Link>
               </Box>
