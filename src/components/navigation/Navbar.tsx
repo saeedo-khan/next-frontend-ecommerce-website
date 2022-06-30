@@ -35,10 +35,10 @@ import { CgLogIn } from "react-icons/cg";
 import { FaUserCircle } from "react-icons/fa";
 
 // context
-import useAuth from "../../context/auth/AuthContext";
 import useCart from "../../context/cart/CartContext";
 import Login from "../login/Login";
 import { useRouter } from "next/router";
+import toast from "react-hot-toast";
 
 interface NavbarProps {
   toggleNav: Boolean;
@@ -103,6 +103,7 @@ const Navbar = ({ toggleNav }: NavbarProps) => {
 
   // function Destroy Cookies 
   const destroy = () => {
+    toast.error('Logout', {position: 'top-center', duration: 4000})
     destroyCookie(null, 'formClient')
     handleCloseUserMenu()
     router.push('/')
@@ -189,21 +190,7 @@ const Navbar = ({ toggleNav }: NavbarProps) => {
             </Menu>
           </Box>
 
-          <Box
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-          >
-            <Link href='/' passHref>
-              <Box component={'a'} sx={{cursor: 'pointer'}}>
-                <Image
-                  src={logo}
-                  alt='logo'
-                  width={60}
-                  height={60}
-                />
 
-              </Box>
-            </Link>
-          </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
 

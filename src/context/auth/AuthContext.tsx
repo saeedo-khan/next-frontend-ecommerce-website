@@ -2,8 +2,7 @@ import { useRouter } from 'next/router'
 import React, { createContext, useContext, useState } from 'react'
 import axios from 'axios';
 import { parseCookies, setCookie } from 'nookies'
-import { GetServerSideProps } from 'next';
-import { resolve } from 'node:path/posix';
+import toast from 'react-hot-toast';
 
 interface AuthContextProps {
     children: React.ReactNode,
@@ -34,6 +33,7 @@ export const AuthContextProvider = ({children}: AuthContextProps) => {
         await axios.post(`${process.env.NEXT_PUBLIC_STRAPI_HEROKU}/api/auth/local`, {"identifier" : email, "password": password})
         .then(res => {
             setLoading(false)
+            toast.success('Login succesed', {position: 'top-center'})
             setCookie(null, 'formClient', res.data.jwt, {
                 maxAge: 30 * 24 * 60 * 60,
                 path: '/'
@@ -43,6 +43,7 @@ export const AuthContextProvider = ({children}: AuthContextProps) => {
         .catch(err => {
             setLoading(false)
             console.log(err)
+            toast.error('Error occured', {position: 'top-center'})
         })
 
     }
@@ -61,16 +62,18 @@ export const AuthContextProvider = ({children}: AuthContextProps) => {
             })
             .then(res => {
                 setLoading(false)
+                toast.success('Loged in succes', {position: 'top-center', duration: 4000})
                 setCookie(null, 'formClient', res.data.jwt, {
                     maxAge: 30 * 24 * 60 * 60,
                     path: '/'
                 })
-                router.push('/')
+                router.push('/cart')
             })
         }
         catch(err){
             setLoading(false)
             console.log(err)
+            toast.error('error occured', {position: 'top-center'})
         }
     }
 

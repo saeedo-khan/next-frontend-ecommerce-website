@@ -94,6 +94,19 @@ const useStyles = makeStyles((theme: Theme) =>
         addItem:{
             display: 'block',
             textAlign: 'center'
+        },
+        dir_text:{
+            textTransform: 'capitalize',
+            textAlign: 'center',
+            marginTop: theme.spacing(3),
+            [theme.breakpoints.down('sm')]:{
+                fontSize: 25,
+                textAlign: 'center',
+            }
+        },
+        dir_text1:{
+            color: 'rgba(0,0,0,0.5)',
+            cursor: 'pointer'
         }
     })
 )
@@ -178,11 +191,11 @@ const Category = ({ categoryData }: InferGetStaticPropsType<typeof getStaticProp
     return (
         <Box sx={{backgroundColor: 'rgba(204, 204, 204, 0.1)'}} pt={13}>
             
-            <h1 style={{textTransform: 'capitalize', textAlign: 'center', marginTop: '2rem'}}>
+            <Box component={'h1'} className={classes.dir_text}>
                  <Link href='/kids-fashion' passHref>
-                    <a style={{color: 'rgba(0,0,0,0.5)', cursor: 'pointer'}}>Kids-Fashion/</a>
+                    <Box component={'a'} className={classes.dir_text1}>Kids-Fashion/</Box>
                  </Link> {categoryData.data.attributes.categories}
-            </h1>
+            </Box>
             <Box mt={5} mb={14}>
             <Divider />
             </Box>

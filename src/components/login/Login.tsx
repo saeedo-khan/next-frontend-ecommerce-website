@@ -9,6 +9,7 @@ import * as yup from 'yup';
 import logo1 from '../../assets/images/Pngtree.png'
 // styles
 import useStyles from './Login.styles'
+import { Toaster } from 'react-hot-toast';
 
 
 
@@ -31,8 +32,6 @@ const Login = ({ setToggleRegister }: {setToggleRegister: React.Dispatch<React.S
     const { getLogin } = useAuth()
 
 
-    // const initialVal = { email: '', password: ''}
-    // const [formValues, setFormValues] = useState<IFormVal>(initialVal)
 
 
     const formik = useFormik({
@@ -87,6 +86,7 @@ const Login = ({ setToggleRegister }: {setToggleRegister: React.Dispatch<React.S
           helperText={formik.touched.password && formik.errors.password}
           className={classes.input__field}
         />
+        <Toaster />
         <Button color="primary" variant="contained" fullWidth type="submit" className={classes.sign__btn}>
           Submit
         </Button>

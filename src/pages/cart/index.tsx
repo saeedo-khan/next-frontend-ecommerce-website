@@ -71,6 +71,19 @@ const useStyles = makeStyles((theme: Theme) =>
         price:{
             fontFamily: 'FuturaPTDemi',
             fontSize: 22
+        },
+        emptycart_text:{
+            fontSize: 50,
+            [theme.breakpoints.down('sm')]:{
+                fontSize: 30
+            }
+        },
+        emptycart_text1:{
+            fontSize: 25,
+            textAlign: 'center',
+            [theme.breakpoints.down('sm')]:{
+                fontSize: 19
+            }
         }
     })
 )
@@ -121,9 +134,9 @@ const Cart: React.FC<CartProps> = () => {
     return(
         <Box>
             {!cookies.formClient? (
-                <Container maxWidth='md'>
-                    <Register />
-                </Container>
+                <Box mt={13} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                        <Register />
+                </Box>
             ) : (
             <Box>
 
@@ -207,30 +220,28 @@ const Cart: React.FC<CartProps> = () => {
                 </Box>
 
                 <Box mt={4}>
-                    <Typography fontFamily='FuturaPTDemi' variant='h3'>Your cart are empty </Typography>
-                    <Typography fontFamily='FuturaPTDemi' variant='h5'>What are you waiting for? </Typography>
+                    <Typography fontFamily='FuturaPTDemi' className={classes.emptycart_text}>Your cart are empty </Typography>
+                    <Typography fontFamily='FuturaPTDemi' className={classes.emptycart_text1}>What are you waiting for? </Typography>
                 </Box>
                 <Box>
-                    <Button variant='contained' 
-                    sx={{
-                        backgroundColor: 'black',
-                        mt: 7,
-                        '&: hover':{
-                            backgroundColor: 'red'
-                        }
-                    }}>
-                        <Link href='/' passHref>
-                            <Box component={'a'} sx={{
-                            backgroundColor: '#333',
-                            color: 'white',
-                            fontSize: 18,
+                    <Link href='/' passHref>
+                            
+                        <Button variant='contained' 
+                        component={'a'}
+                        sx={{
+                            backgroundColor: 'black',
+                            fontFamily:'FuturaPTDemi',
                             textTransform: 'capitalize',
-                            '&:hover':{
+                            fontSize: 18,
+                            mt: 7,
+                            '&: hover':{
                                 backgroundColor: '#EE9051'
                             }
-                            }}>Shopping now</Box>
-                        </Link>
-                    </Button>
+                        }}>
+                            
+                            Shopping now
+                        </Button>
+                    </Link>
                 </Box>
             </Box>
             )}

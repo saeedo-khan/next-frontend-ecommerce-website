@@ -9,6 +9,7 @@ import logo1 from '../../assets/images/Pngtree.png'
 // styles
 import useStyles from './Register.styles'
 import useAuth from '../../context/auth/AuthContext';
+import { Toaster } from 'react-hot-toast';
 
 
 interface HandleNameChangeInterface {
@@ -65,14 +66,7 @@ const Register = () => {
         }
     })
 
-    
-    
-    // const handleChange = ( e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-    //     const { name, value } = e.target;
-    //     //   dynamic name of form and with value
-    //     setFormValues({...formValues, [name]: value})
-    // }
-    
+        
 
   
     return (
@@ -147,7 +141,7 @@ const Register = () => {
                     helperText={formik.touched.confirmPassword  && formik.errors.confirmPassword }
                     />
 
-
+                    <Toaster />
                     <Button 
                     className={classes.sign__btn}
                     variant='contained' 

@@ -40,7 +40,7 @@ export const Footer = () => {
                 <div className={styles.bottom}>
 
                     <div className={styles.copyRight}>
-                        <p className={styles.copyRight__text}>Copyright © 2018 EngoTheme. All rights reserved.</p>
+                        <p className={styles.copyRight__text}>Copyright © 2022 SkhTheme. All rights reserved.</p>
                     </div>
 
                     <div className={styles.socialContact}>

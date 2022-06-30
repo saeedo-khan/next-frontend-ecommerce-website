@@ -9,19 +9,6 @@ export interface CartContextProps{
 }
 
 
-
-
-
-// after struggling with saving data inside reducer state 
-// i recognize its working if i get data globally from local storage 
-// and modify initial state 
-
-
-// export interface IShoppingCart{
-//     shoppingCart: ICartItems;
-//     setShoppingCart: React.Dispatch<React.SetStateAction<ICartItems>>;
-// }
-
 export interface ICartItems{
     cartItem: Products;
     qty: number;
@@ -59,19 +46,10 @@ export const CartContextProvider: React.FC<CartContextProps> = ({children}) => {
     const [totalQuantites, setTotalQuantites] = useState<number>(0)
     const [quanty, setQuanty] = useState<number>(1)
 
-    // if(typeof window !== 'undefined'){
-    //     if(localStorage.getItem('localCart') !== null){
-    //         const data = JSON.parse(localStorage.getItem('localCart') || '')
-    //         setShoppingCart(data)
-    //     }
-    // }
     
 
     useEffect(() => {
         
-        // const price = JSON.parse(localStorage.getItem('totalPrice') || '')
-        // const qty = JSON.parse(localStorage.getItem('totalQty') || '')
-        // const data = JSON.parse(localStorage.getItem('localCart') || '')
         if(localStorage.getItem('localCart')){
             const data = JSON.parse(localStorage.getItem('localCart') || '')
             setShoppingCart(data)
